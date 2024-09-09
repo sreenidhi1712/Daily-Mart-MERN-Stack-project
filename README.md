@@ -1,4 +1,4 @@
-# Grocery-Mart-website
+# Daily-Mart-website
 
 
 <p> Grocery shopping Website</p>
