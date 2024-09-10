@@ -13,9 +13,10 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 const corsOptions = {
-  origin: '*', // Allow all origins
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow GET, POST, PUT, DELETE requests
-  allowedHeaders: '*', // Allow all headers
+  origin: 'https://66dffeda4690b130ddcd5174--kaleidoscopic-raindrop-f847b8.netlify.app/', // Replace with your frontend domain
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204
 };
 
 
