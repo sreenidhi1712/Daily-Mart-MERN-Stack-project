@@ -122,7 +122,7 @@ function Cart() {
       }, {
         headers: { token }
       });
-        console.log(response.message);
+        console.log(response.data.message);
       if (response.data.success) {
         alert('Order Placed!');
         try {
