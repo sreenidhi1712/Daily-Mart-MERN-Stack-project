@@ -118,11 +118,11 @@ function Cart() {
       const response = await axios.post(`${url}/api/order/place`, {
         items: cart,
         amount: total,
-        address,
+        address:address,
       }, {
         headers: { token }
       });
-
+        console.log(response.message);
       if (response.data.success) {
         alert('Order Placed!');
         try {
