@@ -5,6 +5,7 @@ import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 import { BsFillBagPlusFill } from "react-icons/bs";
 import { Context } from './Context/Context';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
 const url = import.meta.env.VITE_BACKEND_URL;
@@ -12,6 +13,7 @@ const token = localStorage.getItem('token');
 
 function Cart() {
   const { products ,cart,setCart} = useContext(Context);
+  const navigate = useNavigate();
 
   const [total, setTotal] = useState(0);
   const [productWithDetails, setProductWithDetails] = useState([]);
@@ -127,6 +129,7 @@ function Cart() {
          await axios.post(`${url}/api/cart/clear`, {}, {
             headers: { token }
           });
+          navigate("/orders");
         } catch (error) {
           console.error('Error emptying cart', error);
         }
