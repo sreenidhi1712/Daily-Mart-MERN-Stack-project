@@ -129,7 +129,10 @@ function Cart() {
          await axios.post(`${url}/api/cart/clear`, {}, {
             headers: { token }
           });
+          if(response.data.success){
+            setCart([]);
           navigate("/orders");
+          }
         } catch (error) {
           console.error('Error emptying cart', error);
         }
