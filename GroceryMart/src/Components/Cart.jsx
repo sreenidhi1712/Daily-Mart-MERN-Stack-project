@@ -242,7 +242,7 @@ const CartItem = ({ items, RemoveItem, incrementItem, decrementItem }) => {
         <div className='h-14 w-full border-t-[0.5px] border-b-slate-200 flex justify-between lap:justify-center lap:items-center lap:py-5'>
           <p className='lap:hidden'>SubTotal</p>
           {/*  eslint-disable-next-line react/prop-types */}
-          <p className='font-bold'>${items.quantity * items.price}</p>
+          <p className='font-bold'>Rs {items.quantity * items.price}</p>
         </div>
       </div>
     </>
