@@ -37,7 +37,7 @@ const token = localStorage.getItem('token');
             {orders.map((order) => (
               <div key={order._id} className="bg-white border border-gray-200 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <h2 className="text-lg font-semibold mb-4 text-gray-800">Order ID: {order._id}</h2>
-                <p className="text-gray-700 mb-2">Total Amount: <span className="font-medium text-gray-900">${order.amount}</span></p>
+                <p className="text-gray-700 mb-2">Total Amount: <span className="font-medium text-gray-900">Rs {order.amount}</span></p>
                 <p className="text-gray-700 mb-2">Payment Status: <span className={`font-medium ${order.payment ? 'text-green-600' : 'text-red-600'}`}>{order.payment ? "Paid" : "Not Paid"}</span></p>
                 <p className="text-gray-700 mb-2">Payment Type: <span className="font-medium text-gray-900">Cash on Delivery</span></p>
                 <p className="text-gray-700 mb-2">Order Date: <span className="font-medium text-gray-900">{new Date(order.date).toLocaleDateString()}</span></p>
@@ -56,7 +56,7 @@ const token = localStorage.getItem('token');
                               <div>
                                 <p className="font-bold text-gray-900">{product.name}</p>
                                 <p className='font-bold'><span className="font-bold text-green-500"> Quantity : </span>{item.quantity} </p>
-                                <p  className='font-bold'><span className="font-bold text-green-500"> Price for each :  </span> ${product.price}</p>
+                                <p  className='font-bold'><span className="font-bold text-green-500"> Price for each :  </span> Rs {product.price}</p>
                               </div>
                             </div>
                           )}

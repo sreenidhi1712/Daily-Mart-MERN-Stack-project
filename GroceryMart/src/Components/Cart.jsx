@@ -166,13 +166,13 @@ function Cart() {
           <div className='w-[80%] flex flex-col items-center border-[0.5px] lap:w-[30%] lap:mr-20'>
             <div className='flex justify-between w-[90%] py-5 border-b-[0.5px]'>
               <p>Subtotal</p>
-              <p>${total}</p>
+              <p>Rs {total}</p>
             </div>
             <div className='flex justify-between w-[90%] py-5 border-b-[0.5px]'>
               <p>Total</p>
-              <p>${total}</p>
+              <p>Rs {total}</p>
             </div>
-            <div className='flex justify-center w-[90%] py-5 border-b-[0.5px]'><p className='font-bold'>Kindly Note- only COD</p></div>
+            <div className='flex justify-center w-[90%] py-5 border-b-[0.5px]'><p className='font-bold'>Kindly Note - Accepting orders only on COD</p></div>
             <input
               type="text"
               placeholder="Enter your address"
@@ -224,7 +224,7 @@ const CartItem = ({ items, RemoveItem, incrementItem, decrementItem }) => {
         <div className='h-14 w-full border-t-[0.5px] flex justify-between lap:justify-center lap:items-center lap:py-5'>
           <p className='lap:hidden'>Price</p>
             {/*  eslint-disable-next-line react/prop-types */}
-          <p className='font-bold'>${items.price}</p>
+          <p className='font-bold'>Rs {items.price}</p>
         </div>
         <div className='h-14 w-full border-t-[0.5px] flex justify-between lap:justify-center lap:items-center lap:py-5'>
           <p className='lap:hidden'>Quantity</p>

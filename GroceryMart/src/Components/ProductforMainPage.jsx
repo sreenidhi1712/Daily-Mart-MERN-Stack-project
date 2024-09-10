@@ -112,7 +112,7 @@ function ProductforMainPage({ items, addToCart, favouritings, favourites }) {
         {/* eslint-disable-next-line react/prop-types */}
         <p className="text-xs text-gray-600 cursor-pointer " onClick={() => navigate(`/individualProduct/${items._id}`)}>{items.category}</p>
         {/* eslint-disable-next-line react/prop-types */}
-        <p className="text-green-700 font-bold cursor-pointer" onClick={() => navigate(`/individualProduct/${items._id}`)}>${items.price}</p>
+        <p className="text-green-700 font-bold cursor-pointer" onClick={() => navigate(`/individualProduct/${items._id}`)}>Rs {items.price}</p>
       </div>
       {/* eslint-disable-next-line react/prop-types */}
       <div className={`absolute right-2 top-2 p-2 rounded-full flex items-center justify-center ${favourites.some((favItem) => favItem.favouriteProduct === items._id) ? 'bg-red-100' : 'bg-green-200'}`}>
